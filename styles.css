@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
 
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #24272e;
+}
 
 * {
   margin: 0;
@@ -8,16 +13,21 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  background: #24272e;
+#main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, auto);
 }
 
-header {
+
+.header {
   background: white;
   padding: 20px;
+  width: 100%;
 }
 
-header h1 {
+.header > h1 {
   color: #24272e;
   text-align: center;
 }
@@ -66,7 +76,7 @@ header h1 {
 
 .choices {
   display: grid;
-  grid-template-columns: repeat(3, 250px);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin: 30px 0;
   padding: 0px 0;
   text-align: center;
