@@ -80,7 +80,7 @@ html, body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   margin: 30px 0;
-  padding: 0px 0;
+  padding: 0 400px;
   text-align: center;
   justify-content: center;
 }
@@ -118,9 +118,20 @@ html, body {
   box-shadow: 0px 0px 30px #555;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .choices {
-    margin: 5px 0;
-    transform: scale(0.5);
+    margin: 10px 0;
+    padding: 0;
+    transform: scale(0.7);
+  }
+
+  .result {
+    display: flex;
+    justify-content: center;
+  }
+
+  .result > p {
+    width: 50%;
+    font-size: 18pt;
   }
 }
